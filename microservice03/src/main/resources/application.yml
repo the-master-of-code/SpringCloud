@@ -1,0 +1,29 @@
+server:
+  #指定服务端口号
+  port: 8094
+  #服务注册中心端口号
+  registrycenter: 8888
+  #服务注册中心ip
+  hostname: localhost
+
+spring:
+  application:
+    #服务名，服务名是唯一的，不同的服务名字不能重复
+    name: microservice03
+
+eureka:
+  client:
+    #是否向注册中心定时更新自己状态
+    fetch-registry: true
+    #是否需要将自己注册到注册中心
+    register-with-eureka: true
+    serviceUrl:
+      #指定去哪个服务注册中心进行注册
+#      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://${server.hostname}:${server.registrycenter}/eureka/
+
+#feign自带断路器,默认为关闭,下面为打开操作
+feign:
+  hystrix:
+    enabled: true
+    polling-interval-ms: 2000
