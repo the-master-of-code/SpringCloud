@@ -6,22 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="microservice01copy" />
-        <module name="SpringCloud" />
-        <module name="server" />
-        <module name="microservice03" />
-        <module name="microservice02" />
         <module name="microservice01" />
+        <module name="microservice01copy" />
+        <module name="microservice02" />
+        <module name="microservice03" />
+        <module name="server" />
+        <module name="SpringCloud" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="microservice01" options="-parameters" />
-      <module name="microservice01copy" options="-parameters" />
-      <module name="microservice02" options="-parameters" />
-      <module name="microservice03" options="-parameters" />
-      <module name="server" options="-parameters" />
+      <module name="microservice01" options="" />
+      <module name="microservice01copy" options="" />
+      <module name="microservice02" options="" />
+      <module name="microservice03" options="" />
+      <module name="server" options="" />
     </option>
   </component>
 </project>
