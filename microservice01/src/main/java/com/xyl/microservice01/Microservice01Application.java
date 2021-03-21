@@ -8,15 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @EnableEurekaClient
 @SpringBootApplication
-@RestController
 public class Microservice01Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Microservice01Application.class, args);
-    }
-
-    @RequestMapping("/hi")
-    public String test(){
-        return "sssss";
     }
 }

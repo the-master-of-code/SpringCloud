@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/microservice03/pom.xml" />
         <option value="$PROJECT_DIR$/microservice01/pom.xml" />
         <option value="$PROJECT_DIR$/microservice01copy/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-redis/pom.xml" />
       </list>
     </option>
   </component>

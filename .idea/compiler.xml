@@ -11,7 +11,7 @@
         <module name="microservice02" />
         <module name="microservice03" />
         <module name="server" />
-        <module name="SpringCloud" />
+        <module name="springcloud-redis" />
       </profile>
     </annotationProcessing>
   </component>

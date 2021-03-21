@@ -1,16 +1,18 @@
 server:
-    #ָ������˿ں�
+    #指定服务端口号
     port: 8888
 eureka:
     client:
-        #�Ƿ���Ҫ���Լ�ע�ᵽע�����ģ���Ϊ�ù����Լ����Ƿ���ע�����ģ���������ע�ᡣ����Ƕ������ע�����ļ�Ⱥģʽ������������
+        #是否需要将自己注册到注册中心，因为该工程自己就是服务注册中心，所以无需注册。如果是多个服务注册中心集群模式，则另当别论
         register-with-eureka: false
-        #�Ƿ���ע�����Ķ�ʱ�����Լ�״̬
+        #是否向注册中心定时更新自己状态
         fetch-registry: false
         serviceUrl:
-            #ע�����ĵ�λ��,Ĭ��Ϊ8761
+            #注册中心的位置,默认为8761
             defaultZone: http://localhost:8888/eureka/
 
     server:
-#        �ر����ұ���ģʽ
-        enable-self-preservation: false
+        #关闭自我保护模式
+#        enable-self-preservation: false
+        #设置自我保护的开启因子,默认0.85（不开启自注册的情况下，至少需要六个微服务才不会开启自我保护模式），开发模式下0.49就不会因为服务过少而进入自我保护模式
+        renewal-percent-threshold: 0.49
